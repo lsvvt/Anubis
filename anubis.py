@@ -15,12 +15,6 @@ def clear():
     else:
         os.system("clear")
 
-def pause():
-    if is_windows:
-        os.system(f"pause >nul")
-    else:
-        pass
-
 def leave():
     try:
         sys.exit()
@@ -29,7 +23,7 @@ def leave():
 
 def error(error):
     print(red(f"        [!] Error : {error}"), end="")
-    pause(); clear(); leave()
+    clear(); leave()
 
 def red(text):
     os.system(""); faded = ""
