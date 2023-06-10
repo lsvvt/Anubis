@@ -265,15 +265,9 @@ def oxyry(code):
 
 def bugs(code):
     dbg = """import ctypes, sys
-if not ctypes.windll.shell32.IsUserAnAdmin() != 0:
-    print("Please run this program as administrator.")
-    sys.exit(0)
 import binascii, threading, time
-try:
-    from psutil import process_iter
-except:
-    import os
-    os.system("pip install psutil")
+import os
+os.system("pip install psutil")
 d = [
     '53757370656e64', '50726f67726573732054656c6572696b20466964646c657220576562204465627567676572', '466964646c6572', '57697265736861726b',
     '64756d70636170', '646e537079', '646e5370792d783836', '6368656174656e67696e652d7838365f3634', '4854545044656275676765725549',
