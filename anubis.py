@@ -170,6 +170,8 @@ def carbon(code):
         pairs[arg] = newname
 
     for attr in attrs:
+        if "excepthook" == attr:
+            continue
         newname = "".join(random.choice(["I", "l"]) for i in range(random.randint(8, 20)))
         while newname in used:
             newname = "".join(random.choice(["I", "l"]) for i in range(random.randint(8, 20)))
